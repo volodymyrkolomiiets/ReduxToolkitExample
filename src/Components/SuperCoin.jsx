@@ -9,11 +9,11 @@ export default function SuperCoin() {
     const totalAmount = cartItems.reduce((total, item) => total + item.quantity * item.price, 0);
 
     useEffect(()=>{
-        if (totalAmount > 100 &&  totalAmount < 200){
+        if (totalAmount >= 100 &&  totalAmount < 200){
             setSuperCoins(10);
-        } else if  (totalAmount > 200 && totalAmount < 300){
+        } else if  (totalAmount >= 200 && totalAmount < 300){
             setSuperCoins(20);
-        } else if (totalAmount > 300){
+        } else if (totalAmount >= 300){
             setSuperCoins(300);
         } else{
             setSuperCoins(0)
